@@ -1,0 +1,6 @@
+FSharp.Core
+Fable.Core
+expecto
+Expecto.FsCheck
+expecto.testresults
+unquote

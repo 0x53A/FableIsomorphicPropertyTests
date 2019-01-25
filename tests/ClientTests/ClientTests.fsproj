@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+
+    <!--<DefineConstants>$(DefineConstants);FABLE_COMPILER</DefineConstants>-->
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="jsverify.fs" />
+    <Compile Include="Util\Aether.fs" />
+    <Compile Include="Util\Util.fs" />
+    
+    <Compile Include="Tests.fs" />
+    
+    <Compile Include="Program.fs" />
+
+    <Content Include="readme.md" />
+
+    <None Include="js\polyfill.js" />
+    <None Include="paket.references" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Client\Client.fsproj" />
+  </ItemGroup>
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>
